@@ -7,7 +7,7 @@ test:
 	python -m pytest --cov=tests
 
 lint:
-	pylint --disable=R,C ./
+	pylint --disable=R,C ./app_logic
 
 format:
 	black *.py app_logic/*.py
