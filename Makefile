@@ -1,14 +1,16 @@
 install:
-	python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+	python -m pip install --upgrade pip && \
+	python -m pip install -r requirements.txt && \
+	python -m textblob.download_corpora
 
 test:
-	python -m pytest --cov=python_env
+	python -m pytest --cov=tests
 
 lint:
 	pylint --disable=R,C ./
 
 format:
-	black *.py
+	black *.py app_logic/*.py
 
 clean:
 	rm -rf __pycache__
