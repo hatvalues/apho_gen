@@ -1,10 +1,10 @@
 FROM public.ecr.aws/docker/library/python:3
 
-WORKDIR /usr/src/app
-
-COPY requirements.txt ./
+RUN mkdir -p /app
+COPY . /app/
+WORKDIR /app
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
-
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+EXPOSE 8080
+CMD ["main.py"]
+ENTRYPOINT ["python"]
