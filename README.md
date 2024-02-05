@@ -1,2 +1,2 @@
 # nlp_function
-Build one, deploy many
+This is just a stub at the moment.
