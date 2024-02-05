@@ -1,3 +1,4 @@
+"""App Entrypoint"""
 from fastapi import FastAPI
 import uvicorn
 from app_logic import inflect_words

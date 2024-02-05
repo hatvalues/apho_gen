@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/python:3
+FROM python:3.10-slim-bookworm
 
 RUN mkdir -p /app
 COPY . /app/
