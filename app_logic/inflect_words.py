@@ -1,11 +1,10 @@
-
 """Stub functionality for some initial testing"""
+
 from textblob import TextBlob
 from collections import defaultdict
 
 
 def pre_process(text):
-    blob = TextBlob(text)
     """
     Return a textblob.
 
@@ -19,6 +18,7 @@ def pre_process(text):
     blob
         a textblob.
     """
+    blob = TextBlob(text)
     return blob
 
 def inflect_plur(blob):
