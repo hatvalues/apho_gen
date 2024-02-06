@@ -2,7 +2,7 @@
 from fastapi.testclient import TestClient
 import pytest
 from main import app
-from app_logic.apho_gen import partials
+from app_logic.apho_gen import partial_texts
 
 client = TestClient(app)
 
@@ -11,7 +11,7 @@ def test_get_apho_api():
     response = client.get(f'v1/feel-good/{name}')
     message = response.json()['message']
     assert name in message
-    assert any(p in message for p in partials)
+    assert any(p in message for p in partial_texts)
     
 def test_plur_api():
     text = "here comes the rain again. this these that those"
