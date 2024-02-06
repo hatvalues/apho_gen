@@ -1,13 +1,15 @@
 """Generates the aphorism (currently a stub)"""
+
 import random
 
-partials = [
+partial_texts = (
     "you can tell how smart people are by what they laugh at.",
     "do more of what makes you happy.",
-    "free yourself of negative people and surround yourself with those who love you."
-    ]
+    "free yourself of negative people and surround yourself with those who love you.",
+)
 
-def get_apho_for_name(name, partials=partials):
+
+def get_apho_for_name(name, partials=partial_texts):
     """
     Return a personalised affirming aphorism.
 
@@ -21,5 +23,5 @@ def get_apho_for_name(name, partials=partials):
     apho
         Affirming message (must include name).
     """
-    
-    return f'Always remember, {name}, {random.choice(partials)}'
+
+    return f"Always remember, {name}, {random.choice(partials)}"
